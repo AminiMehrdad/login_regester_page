@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/stylesheets/Login.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Sign In</h1>
+
+        <form action="/auth/islogin" method="post">
+            <label for="UserName">
+                Username:
+            </label>
+            <input type="text" id="UserName" name="UserName" placeholder="Enter your Username" required>
+
+            <label for="PhoneNumber">
+                PhoneNumber:
+            </label>
+            <input type="text" id="PhoneNumber" name="PhoneNumber" placeholder="Enter your PhoneNumber" required>
+
+            <p style="width: 100%; font-size: small; color: rgb(185, 0, 0);"><b>
+                    <%= msg.msg %>
+                </b></p>
+
+            <div class="wrap">
+                <button type="submit">
+                    Sign In
+                </button>
+            </div>
+        </form>
+        <div style="display: flex; flex-direction: column;">
+            <p style="font-size: small; display: flex; justify-self: start;">Not registered?
+                <a href="/auth/regester" style="text-decoration: none;">
+                    Create an account
+                </a>
+            </p>
+            <p style="font-size: small;display: flex; justify-self: start;">Forget PhoneNumber?
+                <a href="/auth/login" style="text-decoration: none;">
+                    try with password
+                </a>
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>

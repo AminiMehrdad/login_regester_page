@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SingUp</title>
+    <link rel="stylesheet" href="/stylesheets/SingUp.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="/auth/isregester" method="POST">
+            <h1>Sign Up</h1>
+            <hr>
+           
+            <label for="FerstName" class="<%= inputIsValid[0]? " invalid_label" : "" %>">FerstName:</label>
+            <input type="text" placeholder="Enter FerstName" name="FerstName" class="<%= inputIsValid[0]? "invalid_input": "" %>" required>
+            <p style="width: 100%; font-size: small;" class="<%= inputIsValid[0]? " invalid_text" : "valid_test" %>">Incorrect FerstName</p>
+
+            <label for="LastName" class="<%= inputIsValid[1]? " invalid_label" : "" %>">LastName:</label>
+            <input type="text" placeholder="Enter LastName" name="LastName" class="<%= inputIsValid[1]? "invalid_input": "" %>" required>
+            <p style="width: 100%; font-size: small;" class="<%= inputIsValid[1]? " invalid_text" : "valid_test" %>">Incorrect LastName</p>
+
+
+            <label for="UserName" class="<%= inputIsValid[2]? " invalid_label" : "" %>">UserName:</label>
+            <input type="text" placeholder="Enter UserName" name="UserName" class="<%= inputIsValid[2]? "invalid_input": "" %>" required>
+            <p style="width: 100%; font-size: small;" class="<%= inputIsValid[2]? " invalid_text" : "valid_test" %>">This user is befor SingUp</p>
+
+            <label for="Password" class="<%= inputIsValid[3]? " invalid_label" : "" %>">Password:</label>
+            <input type="Password" placeholder="Enter Password" name="Password" class="<%= inputIsValid[3]? "invalid_input" : "" %>" required>
+            <p style="width: 100%; font-size: small;" class="<%= inputIsValid[3]? " invalid_text" : "valid_test" %>">Rong Password</p>
+
+            <label for="PhoneNumber" class="<%= inputIsValid[4]? " invalid_label" : "" %><%= inputIsValid[5]? " invalid_label" : "" %>">PhoneNumber:</label>
+            <input type="text" placeholder="Enter PhoneNumber" name="PhoneNumber" class="<%= inputIsValid[4]? " invalid_input" : ""%><%= inputIsValid[5]? "invalid_input" : "" %>" required>
+                <p style="width: 100%; font-size: small;" class="<%= inputIsValid[4]? " invalid_text" : "valid_test" %>">Please inter the correct phonenumer</p>
+                <P style="width: 100%; font-size: small;" class="<%= inputIsValid[5]? " invalid_text" : "valid_test" %>">you befor sing Up with this PhoneNumber befor</P>
+
+                <label for="use">Gender:</label>
+                <select id="Gender" name="Gnder">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+
+                <div class="clearfix">
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+        </form>
+        <p>Register befor?
+            <a href="Login" style="text-decoration: none;">
+                Log in
+            </a>
+        </p>
+    </div>
+
+</body>
+
+</html>

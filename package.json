@@ -1,0 +1,23 @@
+{
+  "name": "redis-practice",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "SET DEBUG=redis-practice:*&SET port=5000&nodemon ./bin/www",
+    "migrate": "node ./database/migrate.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "ioredis": "^5.4.2",
+    "morgan": "~1.9.1",
+    "mysql2": "^3.12.0",
+    "redis": "^4.7.0",
+    "sequelize": "^6.37.5",
+    "uuid": "^11.0.5",
+    "validator": "^13.12.0"
+  }
+}

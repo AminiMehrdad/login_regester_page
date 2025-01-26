@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SingUp</title>
+    <link rel="stylesheet" href="/styles/SingUp.css">
+</head>
+
+        <div class="container">
+            <form action="/update" method="POST">
+                <h1>editProfile</h1>
+                <hr>
+
+
+                <label for="username" class="<%= inputIsValid[0]? " invalid_label" : "" %>">Username:</label>
+                <input type="text" name="username" class="<%= inputIsValid[0]? " invalid_input": "" %>" value="<%=inputIsValid[4] %>"  required>
+                    <p style="width: 100%; font-size: small;" class="<%= inputIsValid[0]? " invalid_text" : "valid_test"%>">This user is befor SingUp</p>
+                    <label for="password" class="<%= inputIsValid[1]? " invalid_label" : "" %>">Password:</label>
+                    <input type="password" name="password" class="<%= inputIsValid[1]? " invalid_input" : "" %>" value="<%= inputIsValid[5] %>"  required>
+                        <p style="width: 100%; font-size: small;" class="<%= inputIsValid[1]? " invalid_text":"valid_test" %>">The Password shold be 8 carecter an have at last 1 word and 1 number</p>
+                        <label for="email" class="<%= inputIsValid[2]? " invalid_label" : "" %> <%= inputIsValid[3]? "invalid_label" : "" %>">Email:</label>
+                        <input type="text" name="email" class="<%= inputIsValid[2]? " invalid_input" : "" %> <%= inputIsValid[3]? "invalid_input" : "" %>" value="<%= inputIsValid[6] %>" required>
+                                <p style="width: 100%; font-size: small;" class="<%= inputIsValid[2]? " invalid_text": "valid_test" %>">Please inter the correct address</p>
+                                <P style="width: 100%; font-size: small;" class="<%= inputIsValid[3]? " invalid_text": "valid_test" %>">you befor sing Up with this Email befor</P>
+                                <label for="use">Gender:</label>
+                                <select id="Gender" name="Gnder">
+                                    <option value="<%= inputIsValid[7]  %>" selected><%= inputIsValid[7] %></option>
+                                    <option value="Other">Other</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                                <input type="hidden" name="last_username" value="<%= inputIsValid[4] %>">
+                                <div class="clearfix">
+                                    <button  style="margin-bottom: 5px;" type="submit" class="signupbtn">Save</button>
+                                </div>
+            </form>
+            <form action="/islogin" method="POST">
+                <input type="hidden" name="username" value="<%= inputIsValid[4] %>">
+                <input type="hidden" name="password" value="<%= inputIsValid[5] %>">
+                <button style="margin-top: 5px; background-color: red;" type="submit">Cancel</button>
+            </form>
+
+        </div>
+ 
+
+</body>
+
+</html>
